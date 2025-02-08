@@ -1,0 +1,19 @@
+#waveform {
+    height: 200px;
+    width: 33vw;  /* Set width to 1/3 of viewport */
+    margin: 0 auto; /* Center the waveform */
+}
+
+.audio-visualizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+audio {
+  margin-bottom: 10px;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
