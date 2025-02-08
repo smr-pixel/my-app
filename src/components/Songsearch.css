@@ -1,6 +1,6 @@
 .input-wrapper {
     background-color:aliceblue;
-    width: 100%;
+    width: 30%;
     border-radius: 10px;
     height: 2.5rem;
     padding: 0 15px;
@@ -16,4 +16,13 @@ input {
     font-size: 1.25rem;
     width: 100%;
     margin-left: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#anchor-icon {
+    color:#d66b29;
+    font-size: 1.5rem;
 }

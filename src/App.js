@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import logo from './Wayfinderlogo.png';
 import './App.css';
+import './components/Songsearch.css';
 import { Songsearch } from './components/Songsearch';
+import { SearchResult } from './components/SearchResult.js';
 
 const HUGGINGFACE_API_KEY = process.env.REACT_APP_HUGGINGFACE_API_KEY;
 
@@ -10,6 +12,7 @@ const HUGGINGFACE_API_KEY = process.env.REACT_APP_HUGGINGFACE_API_KEY;
 function App() {
 
   const [apiResult, setApiResult] = useState(null); // State to store API response
+  const [results, setResults] = useState([]); // State to store search results
   const [loading, setLoading] = useState(false);   // State to track loading
   
   // Function to make the API call
@@ -50,6 +53,12 @@ function App() {
       </header>
       <p>Copy and paste a song's Spotify link to view song metrics and similar songs.</p>
 
+      <div>
+        <Songsearch setResults={setResults}/>
+        <SearchResult results={results}/>
+      </div>
+
+
       <section className="section" style={{ height: '100vh' }}>
         <h2>Section 1</h2>
         <p>This is the first section of the page. Scroll down to see more!</p>
@@ -72,10 +81,7 @@ function App() {
             </div>
           </section>
 
-          <Songsearch />
-          <div className="input-wrapper">
-            <div>SearchResults</div>
-          </div>
+          
     
 
           <footer className="App-footer">

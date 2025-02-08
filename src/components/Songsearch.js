@@ -1,12 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
+import { FiAnchor } from "react-icons/fi";
+import "./Songsearch.css";
 
-import { FaSearch } from "react-icons/fa";
+export const Songsearch = ({setResults}) => {
+    const [input, setInput] = useState("");
 
-export const Songsearch = () => {
+    const fetchData = (value) => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((response) => response.json())
+            .then(json => {
+            const results = json.filter((user) => {
+                return user && user.name && user.name.toLowerCase().includes(value);
+            });
+            setResults(results);
+        });
+    }
+
+    const handleChange = (value) => {
+        setInput(value);
+        fetchData(value);
+    }
+
     return (
         <div className="input-wrapper">
-            <FaSearch id="search-icon" />
-            <input placeholder="Enter Spotify song url" />
+            <FiAnchor id="anchor-icon" />
+            <input 
+                placeholder="Enter Spotify song url"
+                value={input}
+                onChange={(e) => handleChange(e.target.value)}
+            />
         </div>
-    )
-}
+    );
+};
