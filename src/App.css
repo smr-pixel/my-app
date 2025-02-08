@@ -51,6 +51,82 @@ html {
   color: #61dafb;
 }
 
+
+
+.login-btn {
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.login-btn button {
+  background-color: #1DB954; /* Spotify green */
+  color: white;
+  font-size: 1rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn button:hover {
+  background-color: #1ed760; /* Lighter green */
+}
+
+/* Form Styles */
+#spotify-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#spotify-form label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+#spotify-form input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#spotify-form button {
+  background-color: #1DB954;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#spotify-form button:hover {
+  background-color: #1ed760;
+}
+
+/* Track Info Styles */
+#track-info {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #444;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,5 +1,7 @@
 {
   "name": "my-app",
+  "homepage": "https://addyagas.github.io/WayveFinder",
+  "proxy": "http://localhost:8888",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
